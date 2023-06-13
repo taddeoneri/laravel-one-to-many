@@ -28,6 +28,7 @@
             <td>{{ $project->title }}</td>
             {{-- <td><img class="img-thumbnail" style="width:100px" src="{{ $post->image }}" alt="{{ $post->title }}"></td> --}}
             <td>{{ $project->created_at }}</td>
+            <td>{{ $project->category ? $project->category->name : 'Senza categoria' }}</td>
             <td>
                 <div class="d-flex align-items-center">
                     <a href="{{ route('admin.projects.show', $project->slug) }}" class="btn btn-primary text-white"><i class="fa-solid fa-eye"></i></a>
